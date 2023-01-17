@@ -11,8 +11,8 @@ public class DBConnection {
     private static Connection conn;
     static{
         try{
-           Class.forName("oracle.jdbc.OracleDriver");
-            conn=DriverManager.getConnection("jdbc:oracle:thin:@//ABHI:1521/XE", "evoting", "evoting");
+           Class.forName("oracle.jdbc.OracleDriver"); //load driver
+           conn=DriverManager.getConnection("jdbc:oracle:thin:@//DESKTOP-CHE429J:1521/XE","advjavabatch","mystudents");
             System.out.println("Connection opend successfully");
         }
         catch(ClassNotFoundException e){

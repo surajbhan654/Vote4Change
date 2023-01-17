@@ -33,8 +33,8 @@ public class RegistrationDao {
     }
      public static boolean addUser(UserDetails user) throws SQLException {
         ps1.setString(1,user.getUserid());
-        ps1.setString(3,user.getUsername());
         ps1.setString(2,user.getPassword());
+        ps1.setString(3,user.getUsername());
         ps1.setString(4,user.getAddress());
         ps1.setString(5,user.getCity());
         ps1.setString(6,user.getEmail());
