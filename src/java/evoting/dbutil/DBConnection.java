@@ -12,7 +12,7 @@ public class DBConnection {
     static{
         try{
            Class.forName("oracle.jdbc.OracleDriver"); //load driver
-           conn=DriverManager.getConnection("jdbc:oracle:thin:@//DESKTOP-CHE429J:1521/XE","advjavabatch","mystudents");
+           conn=DriverManager.getConnection("jdbc:oracle:thin:@//DESKTOP-NQL64O9:1521/XE","advjavabatch","mystudents");
             System.out.println("Connection opend successfully");
         }
         catch(ClassNotFoundException e){

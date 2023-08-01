@@ -44,8 +44,8 @@ public class UserDao {
         if(rs.next())
             return false;
         ps1.setString(1,user.getUserid());
-        ps1.setString(3,user.getUsername());
         ps1.setString(2,user.getPassword());
+        ps1.setString(3,user.getUsername());
         ps1.setString(4,user.getAddress());
         ps1.setString(5,user.getCity());
         ps1.setString(6,user.getEmail());
@@ -140,8 +140,9 @@ public class UserDao {
         ResultSet rs=ps6.executeQuery();
         if(rs.next())
         {
-            user.setUserid(uid);
-            user.setUsername(rs.getString(2));
+//            user.setUserid(uid);
+            user.setPassword(rs.getString(2));
+            user.setUsername(rs.getString(3));
             user.setAddress(rs.getString(4));
             user.setCity(rs.getString(5));
             user.setEmail(rs.getString(6));
